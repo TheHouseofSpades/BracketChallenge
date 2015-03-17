@@ -1,0 +1,44 @@
+import java.lang.*;
+import java.util.*;
+import java.io.*;
+public class Bracket{
+  
+ Team teams[] = new Team[16];
+ 
+ 
+ public void Bracket() throws IOException{
+   Scanner fileReader =  new Scanner(new File("east.txt"));
+   fileReader.nextLine();
+   for(int i=0;i<16;i++){
+    
+    int rank = fileReader.nextInt();
+    String teamName = fileReader.next();
+    int wins = fileReader.nextInt();
+    int losses = fileReader.nextInt();
+    double pyth = fileReader.nextDouble();
+    double adjO = fileReader.nextDouble();
+    double adjORank = fileReader.nextDouble();
+    double adjD = fileReader.nextDouble();
+    double adjDRank = fileReader.nextDouble();
+    double adjT = fileReader.nextDouble();
+    double adjTRank = fileReader.nextDouble();
+    double luckRank = fileReader.nextDouble();
+    double sosPyth = fileReader.nextDouble();
+    double sosPythRank = fileReader.nextDouble();
+    double oppO = fileReader.nextDouble();
+    double oppORank = fileReader.nextDouble();
+    double oppD = fileReader.nextDouble();
+    double oppDRank = fileReader.nextDouble();
+    double ncsosPyth = fileReader.nextDouble();
+    double ncsosPythRank = fileReader.nextDouble();
+    fileReader.nextLine();
+    teams[i] = new Team(rank, teamName, wins, losses, pyth, adjO, adjORank, adjD, adjDRank, adjT, adjTRank, luckRank, sosPyth, sosPythRank, oppO, oppORank, oppD, oppDRank, ncsosPyth, ncsosPythRank);
+   }
+ }
+ public String playGame(Team a, Team b){
+   for(int i=0;i<40;i++){
+    
+   }
+   return " ";
+ }
+}

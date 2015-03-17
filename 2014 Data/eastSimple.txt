@@ -1,0 +1,17 @@
+Rank	School	w	l	Pyth	AdjO	AdjORank	AdjD	AdjDRank	LuckRank
+1	Virginia	28	6	0.9418	114	25	89.5	3	113
+2	Villanova	28	4	0.9196	115.8	16	93.7	14	21
+3	IowaSt.	26	7	0.8758	115.9	15	97.8	54	34
+4	MichiganSt.	26	8	0.9038	117.3	11	96.5	39	206
+5	Cincinnati	27	6	0.8701	107.9	109	91.4	9	74
+6	NorthCarolina	23	9	0.8645	111	58	94.5	22	168
+7	Connecticut	26	8	0.8688	109.5	80	92.9	11	54
+8	Memphis	23	9	0.802	110.4	66	97.8	53	92
+9	GeorgeWashington	24	8	0.8017	109.4	81	96.9	44	37
+10	SaintJoseph's	24	9	0.7935	110.3	68	98.1	55	16
+11	Providence	23	11	0.8117	114.3	22	100.6	92	41
+12	Harvard	26	4	0.8402	111.2	55	96.3	33	129
+13	Delaware	25	9	0.6366	110.9	60	105.6	192	55
+14	NorthCarolinaCentral	28	5	0.7188	107.5	117	99	63	95
+15	Milwaukee	21	13	0.4891	104.5	177	104.9	172	5
+16	CoastalCarolina	21	12	0.3552	97.3	298	102.5	124	84

@@ -1,0 +1,17 @@
+public class Team{
+ int rank, wins, losses, sosRank;
+ String teamName;
+ double rpi, sos;
+ 
+ 
+ 
+ public Team(int r, String tn, int w, int l, double rpi, int sosR, double sos){
+  rank = r; 
+  teamName = tn;
+  wins = w;
+  losses = l;
+  rpi = rpi;
+  sosRank = sosR;
+  sos = sos;
+ }
+}
