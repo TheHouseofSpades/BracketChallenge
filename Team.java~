@@ -1,3 +1,4 @@
+
 public class Team{
  int rank, wins, losses;
  String teamName;

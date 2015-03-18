@@ -36,7 +36,7 @@ public class Bracket{
  }
  public String toString(){
    for(Team t: teams)
-    return(rank + ". " + teamName);
+    return(t.rank + ". " + t.teamName);
  }
  int pointsA;
  int pointsB;
@@ -55,12 +55,16 @@ public class Bracket{
     if(a.oppORank + a.oppDRank < b.oppORank + b.oppDRank) pointsA += 20;
     else pointsB += 20;
     for(int o;o<a.adjT;o++){
-     pointsA += (int)(Math.random()*4); 
+     pointsA += (int)(Math.random()*4);
     }
     for(int d;d<b.adjT;d++){
      pointsB += (int)(Math.random()*4);
     }
+    if(pointsA > pointsB) winsA++;
+     else winsB++;
    }
-   return " ";
+   if(winsA > winsB)
+     return(a.teamName);
+    else return(b.teamName);
  }
 }
