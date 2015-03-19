@@ -5,12 +5,13 @@ public class Team{
  int rank, wins, losses;
  String teamName;
  double pyth, adjO, adjORank, adjD, adjDRank, adjT, adjTRank, luckRank, sosPyth, sosPythRank, oppO, oppORank, oppD, oppDRank, ncsosPyth, ncsosPythRank;
- int teamA=0, teamB=0;
+ static int teamA=0, teamB=0;
  public static void main (String str[]) throws IOException{
    Scanner scan = new Scanner(System.in);
+   Bracket.Bracket();
    teamA = scan.nextInt();
    teamB = scan.nextInt();
-   Bracket.playGame(teamA, teamB);
+   System.out.println(Bracket.playGame(teamA, teamB));
  }
  
  

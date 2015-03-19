@@ -3,10 +3,10 @@ import java.util.*;
 import java.io.*;
 public class Bracket{
   
- Team teams[] = new Team[16];
+static Team teams[] = new Team[16];
  
  
- public void Bracket() throws IOException{
+ public static void Bracket() throws IOException{
    Scanner fileReader =  new Scanner(new File("east.txt"));
    fileReader.nextLine();
    for(int i=0;i<16;i++){
@@ -40,22 +40,22 @@ public class Bracket{
    }
    return"Potatoes";
  }
- int pointsA;
- int pointsB;
- int winsA = 0;
- int winsB = 0;
- public String playGame(int a, int b){
-   for(int i=0;i<50;i++){
+ static int pointsA;
+ static int pointsB;
+ static int winsA = 0;
+ static int winsB = 0;
+ public static String playGame(int a, int b){
+   for(int i=0;i<100;i++){
     pointsA = 0;
     pointsB = 0;
     if(teams[a].wins - teams[a].losses > teams[b].wins - teams[b].losses) pointsA += 30;
-    else pointsB += 30;
-    if(teams[a].sosPythRank > teams[b].sosPythRank) pointsA += 20;
-    else pointsB += 20;
+    if(teams[a].wins - teams[a].losses < teams[b].wins - teams[b].losses) pointsB += 30;
+    if(teams[a].ncsosPythRank < teams[b].ncsosPythRank) pointsA += 20;
+    if(teams[a].ncsosPythRank > teams[b].ncsosPythRank) pointsB += 20;
     if(teams[a].adjORank + teams[a].adjDRank < teams[b].adjORank + teams[b].adjDRank) pointsA += 20;
-    else pointsB += 20;
+    if(teams[a].adjORank + teams[a].adjDRank > teams[b].adjORank + teams[b].adjDRank) pointsB += 20;
     if(teams[a].oppORank + teams[a].oppDRank < teams[b].oppORank + teams[b].oppDRank) pointsA += 20;
-    else pointsB += 20;
+    if(teams[a].oppORank + teams[a].oppDRank < teams[b].oppORank + teams[b].oppDRank) pointsB += 20;
     for(int o=0;o<teams[a].adjT;o++){
      pointsA += (int)(Math.random()*4);
     }
@@ -66,7 +66,9 @@ public class Bracket{
      else winsB++;
    }
    if(winsA > winsB)
-     return(teams[a].teamName);
-    else return(teams[b].teamName);
+    return(teams[a].teamName);
+   if(winsA < winsB)
+    return(teams[b].teamName);
+   return "You messed up.";
  }
 }
